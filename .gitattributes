@@ -1,0 +1,110 @@
+# Normalize text files across operating systems
+* text=auto eol=lf
+
+# Godot project and resource files
+*.gd text
+*.gdshader text
+*.tscn text
+*.tres text
+*.godot text
+*.import text
+*.uid text
+*.cfg text
+*.cs text diff=csharp
+*.gdextension text
+
+# Common source and configuration formats
+*.c text
+*.cc text
+*.cpp text
+*.h text
+*.hpp text
+*.java text
+*.kt text
+*.kts text
+*.gradle text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+*.toml text
+*.ini text
+*.properties text
+*.md text
+*.txt text
+*.sh text
+*.bat text
+*.ps1 text
+
+# Images and image-editing source files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.bmp binary
+*.tif binary
+*.tiff binary
+*.ico binary
+*.heic binary
+*.avif binary
+*.psd binary
+*.xcf binary
+*.kra binary
+*.exr binary
+*.hdr binary
+*.dds binary
+
+# Audio and music
+*.ogg binary
+*.wav binary
+*.mp3 binary
+*.flac binary
+*.m4a binary
+*.aac binary
+*.aiff binary
+*.aif binary
+*.mid binary
+*.midi binary
+*.opus binary
+
+# Video
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.mkv binary
+*.webm binary
+*.mpeg binary
+*.mpg binary
+*.wmv binary
+
+# Fonts, compiled resources, archives, and application binaries
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.pck binary
+*.res binary
+*.scn binary
+*.ctex binary
+*.stex binary
+*.zip binary
+*.tar binary
+*.tar.gz binary
+*.tgz binary
+*.gz binary
+*.7z binary
+*.rar binary
+*.aar binary
+*.jar binary
+*.apk binary
+*.aab binary
+*.ipa binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.class binary
+*.dex binary
+*.wasm binary
+*.pdf binary

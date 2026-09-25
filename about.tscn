@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://4lk2p5pw0q0o"]
+
+[ext_resource type="Theme" uid="uid://33qjf14viilc" path="res://main_theme.tres" id="1_h2bm4"]
+[ext_resource type="Script" uid="uid://y8issylp3oeb" path="res://about.gd" id="2_4q2eq"]
+
+[node name="About" type="Control" unique_id=750221812]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h2bm4")
+script = ExtResource("2_4q2eq")
+
+[node name="Panel" type="Panel" parent="." unique_id=658608575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMarginContainer" type="MarginContainer" parent="." unique_id=1308032120]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMarginContainer" unique_id=1410294811]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer/ScrollContainer" unique_id=1849102938]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="HeaderContainer" type="VBoxContainer" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=1928471023]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/HeaderContainer" unique_id=1029384756]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "About"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/HeaderContainer" unique_id=1293847561]
+modulate = Color(0.75, 0.75, 0.75, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Google Play Billing Demonstration"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=1938475612]
+layout_mode = 2
+
+[node name="EngineContainer" type="VBoxContainer" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=1384756129]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="EngineTitleLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/EngineContainer" unique_id=1485729103]
+layout_mode = 2
+text = "Godot Engine"
+horizontal_alignment = 1
+
+[node name="EngineDescLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/EngineContainer" unique_id=1582930412]
+modulate = Color(0.85, 0.85, 0.85, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "This application is developed with the Godot Engine, an open-source, lightweight 2D and 3D game engine."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="EngineLinkButton" type="LinkButton" parent="MainMarginContainer/ScrollContainer/VBoxContainer/EngineContainer" unique_id=1683920194]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.380392, 0.690196, 0.960784, 1)
+theme_override_font_sizes/font_size = 20
+text = "https://godotengine.org/"
+
+[node name="HSeparator2" type="HSeparator" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=1783920195]
+layout_mode = 2
+
+[node name="PluginContainer" type="VBoxContainer" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=1883920196]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PluginTitleLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/PluginContainer" unique_id=1983920197]
+layout_mode = 2
+text = "Google Play Billing Module"
+horizontal_alignment = 1
+
+[node name="PluginDescLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/PluginContainer" unique_id=2083920198]
+modulate = Color(0.85, 0.85, 0.85, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Demonstration of the in-app purchases module for Godot, supporting one-time consumable and non-consumable products as well as recurring subscriptions."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PluginLinkButton" type="LinkButton" parent="MainMarginContainer/ScrollContainer/VBoxContainer/PluginContainer" unique_id=-2111047097]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.380392, 0.690196, 0.960784, 1)
+theme_override_font_sizes/font_size = 20
+text = "godot-google-play-iapp on GitHub"
+
+[node name="HSeparator3" type="HSeparator" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=-2011047096]
+layout_mode = 2
+
+[node name="SourceContainer" type="VBoxContainer" parent="MainMarginContainer/ScrollContainer/VBoxContainer" unique_id=-1911047095]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SourceTitleLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/SourceContainer" unique_id=-1811047094]
+layout_mode = 2
+text = "Demo Source Code"
+horizontal_alignment = 1
+
+[node name="SourceDescLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/SourceContainer" unique_id=-1711047093]
+modulate = Color(0.85, 0.85, 0.85, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "The complete source code of this demo application will soon be available on GitHub."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SourceNoteLabel" type="Label" parent="MainMarginContainer/ScrollContainer/VBoxContainer/SourceContainer" unique_id=-1611047092]
+modulate = Color(0.65, 0.65, 0.65, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "(Repository link coming soon)"
+horizontal_alignment = 1
+
+[node name="BottomMarginContainer" type="MarginContainer" parent="." unique_id=1642712983]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomMarginContainer" unique_id=-1511047091]
+layout_mode = 2
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BottomMarginContainer/VBoxContainer" unique_id=-1411047090]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="BottomMarginContainer/VBoxContainer" unique_id=1349555776]
+custom_minimum_size = Vector2(180, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back"
+
+[connection signal="pressed" from="MainMarginContainer/ScrollContainer/VBoxContainer/EngineContainer/EngineLinkButton" to="." method="_on_engine_link_button_pressed"]
+[connection signal="pressed" from="MainMarginContainer/ScrollContainer/VBoxContainer/PluginContainer/PluginLinkButton" to="." method="_on_plugin_link_button_pressed"]
+[connection signal="pressed" from="BottomMarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

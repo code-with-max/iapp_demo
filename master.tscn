@@ -1,0 +1,327 @@
+[gd_scene format=3 uid="uid://dlbr8xginr08w"]
+
+[ext_resource type="Theme" uid="uid://33qjf14viilc" path="res://main_theme.tres" id="1_h2bm4"]
+[ext_resource type="Script" uid="uid://1faveueci5fv" path="res://master.gd" id="1_te040"]
+[ext_resource type="Script" uid="uid://brno3vjnx87kq" path="res://addons/android_IAPP/GooglePlayBilling.gd" id="2_s35ub"]
+[ext_resource type="Script" uid="uid://8bt6lsjhvvrd" path="res://billing_handler.gd" id="3_8aqai"]
+
+[node name="master" type="Control" unique_id=300440510]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h2bm4")
+script = ExtResource("1_te040")
+
+[node name="BillingHandler" type="Node" parent="." unique_id=808371432 node_paths=PackedStringArray("billing")]
+unique_name_in_owner = true
+script = ExtResource("3_8aqai")
+billing = NodePath("../GooglePlayBilling")
+
+[node name="GooglePlayBilling" type="Node" parent="." unique_id=1634719834]
+script = ExtResource("2_s35ub")
+metadata/_custom_type_script = "uid://brno3vjnx87kq"
+
+[node name="Panel" type="Panel" parent="." unique_id=658608574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatusMarginContainer" type="MarginContainer" parent="." unique_id=1362963916]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.16
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatusMarginContainer" unique_id=1223250836]
+layout_mode = 2
+
+[node name="ConnectionStatusColorRect" type="ColorRect" parent="StatusMarginContainer/VBoxContainer" unique_id=320561000]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="ConnectionStatusDataLabel" type="Label" parent="StatusMarginContainer/VBoxContainer/ConnectionStatusColorRect" unique_id=1050729329]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -17.0
+offset_right = 46.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "No data"
+horizontal_alignment = 1
+
+[node name="DebugRichTextLabel" type="RichTextLabel" parent="StatusMarginContainer/VBoxContainer" unique_id=1804516388]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=340990782]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.16
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ConsumingMarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2011201106]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ConsumingMarginContainer" unique_id=1806420153]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer" unique_id=559353885]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Consumable products"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer" unique_id=1031776976]
+layout_mode = 2
+
+[node name="GoldAmountLabel" type="Label" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer" unique_id=782738371]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer" unique_id=197182985]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer" unique_id=866974097]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Gold100NameLabel" type="Label" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1247950367]
+unique_name_in_owner = true
+layout_mode = 2
+text = "100 Gold Coins"
+horizontal_alignment = 1
+
+[node name="Gold100Button" type="Button" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=736169971]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+disabled = true
+text = "Buy 100 gold"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer" unique_id=1247950366]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Gold500NameLabel" type="Label" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1247950368]
+unique_name_in_owner = true
+layout_mode = 2
+text = "500 Gold Coins"
+horizontal_alignment = 1
+
+[node name="Gold500Button" type="Button" parent="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1361839961]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+disabled = true
+text = "Buy 500 gold"
+
+[node name="AknowledgementMarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1813868703]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/AknowledgementMarginContainer" unique_id=1875480749]
+layout_mode = 2
+
+[node name="Non consumable" type="Label" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer" unique_id=208341078]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Non cosumable products"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer" unique_id=1801909766]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer" unique_id=1216804158]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer" unique_id=750703425]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StarterPackLabel" type="Label" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=172920326]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+
+[node name="StarterPackButton" type="Button" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=484658350]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Buy starter pack"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer" unique_id=320301073]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VipPassLabel" type="Label" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=169061543]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+
+[node name="VipPassButton" type="Button" parent="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=270044059]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Buy weekly VIP pass"
+
+[node name="SubscriptionMarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=785217162]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/SubscriptionMarginContainer" unique_id=1391765605]
+layout_mode = 2
+
+[node name="SubscriptionLabel" type="Label" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=259725625]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Subscriptions"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=1537755734]
+layout_mode = 2
+
+[node name="SubNameLabel" type="Label" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=1835388349]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+
+[node name="SubDescLabel" type="Label" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=868097592]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+
+[node name="SubPriceLabel" type="Label" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=72880318]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+
+[node name="Subscribed" type="ColorRect" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=1154895813]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="SubscribedLabel" type="Label" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer/Subscribed" unique_id=92218156]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -17.0
+offset_right = 64.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Subscribed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NoAdsSubscriptionButton" type="Button" parent="VBoxContainer/SubscriptionMarginContainer/VBoxContainer" unique_id=1505618762]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+disabled = true
+text = "Subscribe"
+
+[node name="FooterMarginContainer" type="MarginContainer" parent="." unique_id=1538537439]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FooterMarginContainer" unique_id=973549317]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="FooterMarginContainer/VBoxContainer" unique_id=1852485823]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FooterMarginContainer/VBoxContainer" unique_id=600209474]
+layout_mode = 2
+alignment = 1
+
+[node name="AboutButton" type="Button" parent="FooterMarginContainer/VBoxContainer/HBoxContainer" unique_id=1861899652]
+custom_minimum_size = Vector2(180, 60)
+layout_mode = 2
+text = "About
+"
+
+[node name="ExitButton" type="Button" parent="FooterMarginContainer/VBoxContainer/HBoxContainer" unique_id=1194335971]
+custom_minimum_size = Vector2(180, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "EXIT"
+
+[connection signal="connection_status_changed" from="BillingHandler" to="." method="_on_billing_handler_connection_status_changed"]
+[connection signal="new_product_avalaible" from="BillingHandler" to="." method="_on_billing_handler_new_product_avalaible"]
+[connection signal="purchase_already_owned" from="BillingHandler" to="." method="_on_billing_handler_purchase_already_owned"]
+[connection signal="purchase_completed" from="BillingHandler" to="." method="_on_billing_handler_purchase_completed"]
+[connection signal="iap_acknowledged_success" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_acknowledged_success"]
+[connection signal="iap_connected" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_connected"]
+[connection signal="iap_connection_starting" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_connection_starting"]
+[connection signal="iap_consumed_success" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_consumed_success"]
+[connection signal="iap_disconnected" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_disconnected"]
+[connection signal="iap_error_occurred" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_error_occurred"]
+[connection signal="iap_product_details_received" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_product_details_received"]
+[connection signal="iap_purchases_queried" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_purchases_queried"]
+[connection signal="iap_purchases_updated" from="GooglePlayBilling" to="BillingHandler" method="_on_google_play_billing_purchases_updated"]
+[connection signal="pressed" from="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Gold100Button" to="." method="_on_gold_100_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ConsumingMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Gold500Button" to="." method="_on_gold_500_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/StarterPackButton" to="." method="_on_starter_pack_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/AknowledgementMarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VipPassButton" to="." method="_on_vip_pass_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SubscriptionMarginContainer/VBoxContainer/NoAdsSubscriptionButton" to="." method="_on_no_ads_subscription_button_pressed"]
+[connection signal="pressed" from="FooterMarginContainer/VBoxContainer/HBoxContainer/AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="pressed" from="FooterMarginContainer/VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
